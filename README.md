@@ -4,6 +4,7 @@ OAuth implementations for most popular OAuth providers
 # Supported OAuth Providers
 Implemented : 
 - Twitter
+
 Coming soon (Help requested) :
 - GitHub
 - Google
