@@ -1,6 +1,6 @@
 {
   "name": "express-any-oauth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OAuth login for any login provider that just works out of the box - for nodejs/expressjs",
   "main": "index.js",
   "scripts": {
