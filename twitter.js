@@ -5,12 +5,23 @@ module.exports.Twitter = class {
         this.options = options;
     }
     login(req, res, next) {
-        console.log(req.protocol+"//"+req.get('host')+"/oauth-any/twitter/callback");
+	let callbackUrl = this.options.redirectUri;
+	if(!callbackUrl){
+	  const host = req.get('host');
+	  let hostWithProtocol = ""
+	  if(host.startsWith("localhost") || host.startsWith("127.0.0.1")){
+	    hostWithProtocol = "http://"+host
+	  }
+	  else {
+            hostWithProtocol = "https://"+host
+	  }
+	  callbackUrl = hostWithProtocol+"/oauth-any/twitter/callback"
+	}
         if(!this.tw){
          this.tw = new LoginWithTwitter({
             consumerKey: this.options.key,
             consumerSecret: this.options.secret,
-            callbackUrl: this.options.redirectUri || req.protocol+"://"+req.get('host')+"/oauth-any/twitter/callback"
+            callbackUrl
           })
         }
 
