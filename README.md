@@ -5,9 +5,9 @@ OAuth implementations for most popular OAuth providers
 Implemented : 
 - Twitter
 - Google
+- GitHub
 
 Coming soon (Help requested) :
-- GitHub
 - Facebook
 - Microsoft
 - Apple
@@ -43,7 +43,7 @@ Options should include the platforms for which you need oauth enabled
 Once installed, call the following url to invoke the login process 
 ```<a href="/oauth-any/twitter/login?state=/profile"> Login with Twitter </a>```
 
-Once the login is successful, user will be redirected to the url determined by `state` and login information will be available in `req.session[PLAFTOMRM]`, e.g. `req.session.twitter` 
+Once the login is successful, user will be redirected to the url determined by `state` and login information will be available in `req.session[PLATFORM]`, e.g. `req.session.twitter` 
 
 You can replace "twitter" with "google" in the above example for login using Google
 
@@ -81,7 +81,16 @@ http://localhost:<PORT>/oauth-any/google/callback
 https://yourdomainname.com/oauth-any/google/callback
 ```
 
-
+### GitHub
+```
+    options = {
+      github: {
+        key: "Your Client ID"
+        secret: "Your Client Secret"
+        scope: "Your Selected Scope"
+      }
+    }
+```
 
 
 ## Requested help
