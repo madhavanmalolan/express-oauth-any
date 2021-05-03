@@ -30,7 +30,7 @@ module.exports.GitHub = class {
         req.session.GitHub = {
             ...userResponse.data, accessToken
         }
-        res.redirect(req.query.state)
+        res.redirect(this.options.url)
     }
 
 }

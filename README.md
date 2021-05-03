@@ -88,6 +88,7 @@ https://yourdomainname.com/oauth-any/google/callback
         key: "Your Client ID"
         secret: "Your Client Secret"
         scope: "Your Selected Scope"
+        url: "The URL you want to redirect to after receiving the access token"
       }
     }
 ```
