@@ -91,7 +91,12 @@ https://yourdomainname.com/oauth-any/google/callback
       }
     }
 ```
-
+Get your key, secret, scope on https://github.com/settings/apps/new
+Create an app with callback url as 
+```
+http://localhost:<PORT>/oauth-any/github/callback
+https://yourdomain.com/oauth-any/github/callback
+```
 
 ## Requested help
 Please help me implement the various [OAuth Providers listed here](https://en.wikipedia.org/wiki/List_of_OAuth_providers) so that others don't have to
